@@ -16,15 +16,17 @@ class Rectangle {
     int area() {
         return this->length * this->breadth;
     }
+
+    int perimeter() {
+        return 2 * (this->length + this->breadth);
+    }
 };
 
 int main(void) {
-    Rectangle* r = new Rectangle(5, 10);
+    Rectangle r(5, 10);
 
-    r->lengthen();
-    cout << "Area: " << r->area() << std::endl;
-
-    delete r;
+    r.lengthen();
+    cout << "Area: " << r.area() << std::endl;
 
     return 0;
 }
